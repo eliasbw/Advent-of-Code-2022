@@ -6,9 +6,8 @@ if __name__ == '__main__':
     with open("input.txt") as f:
         x = f.readlines()[8:0:-1]
 
-    for ix in range(len(x)):
-        word = x[ix][1::4]
-        for jx, jv in enumerate(word):
+    for word in x:
+        for jx, jv in enumerate(word[1::4]):
             if jv is not " ":
                 stacks[jx] += jv
 
