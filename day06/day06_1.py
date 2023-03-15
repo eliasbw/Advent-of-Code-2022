@@ -7,7 +7,7 @@ if __name__ == "__main__":
             if ix == len(text) - 4:
                 break
 
-            letters = set([letter, text[ix + 1], text[ix + 2], text[ix + 3]])
+            letters = {letter, text[ix + 1], text[ix + 2], text[ix + 3]}
             if len(letters) == 4:
-                print(ix + 4, set([letter, text[ix + 1], text[ix + 2], text[ix + 3]]))
+                print(ix + 4, letters)
                 break
